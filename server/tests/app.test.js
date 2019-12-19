@@ -1,6 +1,7 @@
 const supertest = require('supertest');
-const {_app} = require('../src/api');
-const {expect} = require('chai');
+const { _app } = require('../src/api');
+const { expect } = require('chai');
+
 describe('GET: /', function () {
   it('should send message in response', () => {
     supertest(_app)
