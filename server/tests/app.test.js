@@ -9,7 +9,7 @@ describe('GET: /', function () {
       .expect('Content-Type', /json/)
       .expect(200)
       .end((err, res) => {
-        expect(res.text).equal('Simple node-app server ever!')
+        expect(res.text).equal('Simple node-app server ever (changed)!')
       });
   });
 });
