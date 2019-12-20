@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res, next) => {
-  res.send('Simple node-app server ever!');
+  res.send('Simple node-app server ever (changed)!');
 });
 
 
