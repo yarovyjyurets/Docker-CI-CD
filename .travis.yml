@@ -5,7 +5,7 @@ services:
 
 before_install:
   - cd server
-  - docker build -t whoami7/Docker-CI-CD -f Dockerfile.dev .
+  - docker build -t whoami7/docker-ci-cd-node-server -f Dockerfile.dev .
 
 install:
-  - docker run whoami7/Docker-CI-CD npm run test
+  - docker run whoami7/docker-ci-cd-node-server npm run test
