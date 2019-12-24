@@ -1,28 +1,9 @@
-pipeline {
-    // General settings
-    agent none
-
-    // Stages
-    stages {
-        stage("Build") {
-            // agent {
-            //     dockerfile { filename: 'Dockerfile' }
-            // }
-            steps {
-                echo "====++++executing A++++===="
-            }
-            // post {
-            //     always {
-            //         echo "====++++always++++===="
-            //     }
-            //     success {
-            //         echo "====++++A executed succesfully++++===="
-            //     }
-            //     failure {
-            //         echo "====++++A execution failed++++===="
-            //     }
-        
-            // }
+node {
+    stage('Example') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
+        } else {
+            echo 'I execute elsewhere'
         }
     }
 }
