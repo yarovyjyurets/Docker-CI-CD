@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  // environment {
-  //   registry = "whoami7/server-app"
-  // }
 
   stages {
       stage('Build') {
@@ -14,7 +11,7 @@ pipeline {
           steps {
               echo 'Testing..'
           }
-      }g
+      }
       stage('Deploy') {
           steps {
               echo 'Deploying....'
